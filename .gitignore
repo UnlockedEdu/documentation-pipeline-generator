@@ -1,0 +1,3 @@
+docs/sphinx/build/*
+docs/mkdocs/site/*
+output/*

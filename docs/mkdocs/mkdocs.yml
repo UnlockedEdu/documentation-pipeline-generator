@@ -1,0 +1,41 @@
+site_name: Documentation Pipelines
+theme:
+    name: material
+    palette:
+        primary: blue
+        accent: white
+nav:
+    - Home: index.md
+    - Markdown Addons: mkdocs-examples/addons.md
+markdown_extensions:
+    - pymdownx.superfences
+    - pymdownx.progressbar
+    - pymdownx.details
+    - pymdownx.emoji
+    - pymdownx.keys
+    - pymdownx.smartsymbols
+    - pymdownx.magiclink:
+        repo_url_shortener: True
+        repo_url_shorthand: True
+        social_url_shorthand: True
+        # more options on magiclink https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/#options
+        provider: 'github'
+    - codehilite:
+        # https://help.farbox.com/pygments.html
+        pygments_style: 'pastie'
+        linenums: False
+        # set to false to turn off pygments_style
+        noclasses: True
+    - pymdownx.tasklist
+extra_javascript:
+    - js/flowchart-loader.js
+    - js/details.js
+    - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.8.0/flowchart.min.js
+extra_css:
+    - css/progress_bar.css
+    - css/details.css
+    - css/tasklist.css
+    - css/custom_tasklist.css

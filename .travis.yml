@@ -1,0 +1,17 @@
+language: python
+services:
+  - 'docker'
+python:
+  - '3.6'
+install:
+  - 'pip install pipenv'
+  - 'pipenv sync'
+script: 'make build'
+deploy:
+    provider: 'pages'
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: 'output'
+    on:
+        branch: 'master'
