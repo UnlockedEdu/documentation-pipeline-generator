@@ -3,9 +3,7 @@ services:
   - 'docker'
 python:
   - '3.6'
-install:
-  - 'pip install pipenv'
-  - 'pipenv sync'
+script: 'make build-docker'
 script: 'make build'
 deploy:
     provider: 'pages'
