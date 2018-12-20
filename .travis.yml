@@ -3,7 +3,7 @@ services:
   - 'docker'
 python:
   - '3.6'
-script: 'make build-docker'
+before_script: 'make build-docker'
 script: 'make build'
 deploy:
     provider: 'pages'
