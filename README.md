@@ -1,4 +1,4 @@
-# Documentation Pipeline for Publishing to Github Pages. [![Build Status](https://travis-ci.com/UnlockedEdu/documentation-pipelines.svg?branch=master)](https://travis-ci.com/UnlockedEdu/documentation-pipelines)
+# Documentation Pipeline for Publishing to Github Pages. [![Build Status](https://travis-ci.com/Zelgius/documentation-pipelines.svg?branch=master)](https://travis-ci.com/Zelgius/documentation-pipelines)
 
 ## tl;dr
 This is a cloneable pipeline and toolset for setting up an `sphinx` based
