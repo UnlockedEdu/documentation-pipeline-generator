@@ -4,5 +4,5 @@
 This is a cloneable pipeline and toolset for setting up an `sphinx` based
 documentation site. 
 
-Since this project builds its own documentation, visit [here]() for the full
+Since this project builds its own documentation, visit [here](https://unlockededu.github.io/documentation-pipelines/) for the full
 documentation.
