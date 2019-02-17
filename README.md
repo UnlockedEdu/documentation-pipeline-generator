@@ -1,8 +1,8 @@
-# Documentation Pipeline for Publishing to Github Pages. [![Build Status](https://travis-ci.com/Zelgius/documentation-pipelines.svg?branch=master)](https://travis-ci.com/Zelgius/documentation-pipelines)
+# Documentation Pipeline for Publishing to Github Pages. [![Build Status](https://travis-ci.com/UnlockedEdu/documentation-pipelines.svg?branch=master)](https://travis-ci.com/UnlockedEdu/documentation-pipelines)
 
 ## tl;dr
-This is a cloneable pipeline and toolset for setting up an `sphinx` based
-documentation site. 
+This project uses the `cookiecutter` project generator to generate a fully 
+functional hosted documentation pipeline for you. Simply run `cookiecutter https://github.com/UnlockedEdu/documentation-pipeline-generator.git`
 
-Since this project builds its own documentation, visit [here](https://unlockededu.github.io/documentation-pipelines/) for the full
+Since is a hosted documentation project, visit [here](https://unlockededu.github.io/documentation-pipelines/) for the full
 documentation.

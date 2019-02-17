@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Documentation Pipeline'
-copyright = '2018, Mason Egger'
-author = 'Mason Egger'
+project = '{{ cookiecutter.site_name }}'
+copyright = "{% now 'utc', '%Y' %} {{ cookiecutter.site_author }}"
+author = '{{ cookiecutter.site_author }}'
 
 # The short X.Y version
 version = '0.0.1'
@@ -137,9 +137,9 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DocumentationPipeline.tex',
-     'Documentation Pipeline Documentation',
-     'Mason Egger', 'manual'),
+    (master_doc, '{{ cookiecutter.repository_name }}.tex',
+     '{{ cookiecutter.site_name }}',
+     '{{ cookiecutter.site_author }}', 'manual'),
 ]
 
 
@@ -148,8 +148,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'documentationpipeline',
-     'Documentation Pipeline Documentation',
+    (master_doc, '{{ cookiecutter.repository_name }}',
+     '{{ cookiecutter.site_name }}',
      [author], 1)
 ]
 
@@ -160,9 +160,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DocumentationPipeline',
-     'Documentation Pipeline Documentation',
-     author, 'DocumentationPipeline', 'One line description of project.',
+    (master_doc, '{{ cookiecutter.repository_name }}',
+     '{{ cookiecutter.site_name }}',
+     author, '{{ cookiecutter.repository_name }}',
+     '{{ cookiecutter.site_description }}',
      'Miscellaneous'),
 ]
 
