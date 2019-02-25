@@ -17,8 +17,6 @@ run-mkdocs:
 
 build-mkdocs: clean
 	docker run --rm -it -v `pwd`/docs:/data docs-pipeline mkdocs build 
-	mkdir -p output/
-	cp -r docs/mkdocs/site/* output/
 
 publish-mkdocs:
 	docker run --rm -it -v `pwd`/docs:/data -v "$(HOME)/.ssh":/.ssh mkdocs gh-deploy
