@@ -25,12 +25,13 @@ publish-sphinx:
 
 {% if cookiecutter.documentation_engine in ["MkDocs", "Both"] %}  
 run-mkdocs:
-	docker run --rm -it -v `pwd`/docs/${mkdocs_build_dir}:/data -p 8000:8000 {{ cookiecutter.repository_name }} mkdocs serve -a 0.0.0.0:8000
+	docker run --rm -it -v `pwd`/${mkdocs_build_dir}:/data -p 8000:8000 {{ cookiecutter.repository_name }} mkdocs serve -a 0.0.0.0:8000
 
 build-mkdocs: clean
-	docker run --rm -it -v `pwd`/docs/${mkdocs_build_dir}:/data {{ cookiecutter.repository_name }} mkdocs build 
+	docker run --rm -it -v `pwd`/${mkdocs_build_dir}:/data {{ cookiecutter.repository_name }} mkdocs build 
 	mkdir -p output/
+	cp -r  ${mkdocs_build_dir}/site/* output/
 
 publish-mkdocs:
-	docker run --rm -it -v `pwd`/${mkdocs_build_dir}:/data -v "$(HOME)/.ssh":/.ssh {{ cookiecutter.repository_name }} mkdocs gh-deploy -f docs/mkdocs.yml
+	docker run --rm -it -v `pwd`:/data -v "$(HOME)/.ssh":/root/.ssh {{ cookiecutter.repository_name }} mkdocs gh-deploy -f ${mkdocs_build_dir}/mkdocs.yml
 {% endif %}
