@@ -2,8 +2,8 @@ site_name: {{ cookiecutter.site_name }}
 site_description: {{ cookiecutter.site_description }}
 site_author: {{ cookiecutter.site_author }}
 site_url: https://mycoolsiterepo.com
-repo_name: USER/{{ cookiecutter.repository_name }}
-repo_url: https://github.com/USER/{{ cookiecutter.repository_name }}
+repo_name: {{cookiecutter.github_username }}/{{ cookiecutter.repository_name }}
+repo_url: https://github.com/{{cookiecutter.github_username }}/{{ cookiecutter.repository_name }}
 theme:
     name: material
     palette:
