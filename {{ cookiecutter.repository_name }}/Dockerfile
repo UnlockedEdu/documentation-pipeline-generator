@@ -1,9 +1,8 @@
 FROM python:latest
  
-COPY Pipfile* /data/
+COPY requirements.txt /data/
  
 WORKDIR /data
 
-RUN pip3 install pipenv
+RUN pip3 install -r requirements.txt
 
-RUN pipenv install --system
