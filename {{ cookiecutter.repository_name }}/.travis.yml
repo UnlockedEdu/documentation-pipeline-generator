@@ -4,7 +4,7 @@ services:
 python:
   - '3.6'
 before_script: 'make build-docker'
-script: 'make build'
+script: 'make docker-build'
 deploy:
     provider: '${documentation_hosting_provider_rendered}'
     skip-cleanup: true

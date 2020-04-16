@@ -5,7 +5,7 @@
 	"site_author": "Albus Dumbledore",
 	"github_username": "adumbledore",
     "license": ["Apache-2", "BSD-2", "BSD-3", "GPL-2", "GPL-3", "MIT", "MPL-2", "None"],
-	"documentation_engine": ["MkDocs", "Sphinx", "Both"],
+	"documentation_engine": ["MkDocs"],
 	"documentation_hosting_provider": ["GitHub Pages", "None"],
 	"continuous_integration": ["Travis-CI", "None"]
 }

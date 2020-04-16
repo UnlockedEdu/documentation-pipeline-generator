@@ -1,4 +1,6 @@
-build: build-docker build-mkdocs
+build: build-mkdocs
+
+docker-build: docker-build-mkdocs
 
 run: run-mkdocs
 
@@ -20,13 +22,13 @@ docker-build-sphinx: clean
 docker-publish-sphinx:
 	@echo "Currently not supported. Just haven't had time to do it. PR accepted"
 
-local-run-sphinx: build
+run-sphinx: build
 	python -m http.server 8000 --directory build/html
 
-local-build-sphinx: clean
+build-sphinx: clean
 	sphinx-build source build/html
 
-local-publish-sphinx:
+publish-sphinx:
 	@echo "Currently not supported. Just haven't had time to do it. PR accepted"
 
 {% endif %}
@@ -43,15 +45,15 @@ docker-build-mkdocs: clean
 docker-publish-mkdocs:
 	docker run --rm -it -v `pwd`:/data -v "$(HOME)/.ssh":/root/.ssh {{ cookiecutter.repository_name }} mkdocs gh-deploy -f ${mkdocs_build_dir}/mkdocs.yml
 
-local-run-mkdocs:
-	mkdocs serve -a 0.0.0.0:8000
+run-mkdocs:
+	mkdocs serve -f docs/mkdocs.yml -a 0.0.0.0:8000
 
-local-build-mkdocs: clean
-	mkdocs build 
+build-mkdocs: clean
+	mkdocs build -f docs/mkdocs.yml
 	mkdir -p output/
 	cp -r  ${mkdocs_build_dir}/site/* output/
 
-local-publish-mkdocs:
+publish-mkdocs:
 	mkdocs gh-deploy -f ${mkdocs_build_dir}/mkdocs.yml
 
 {% endif %}
