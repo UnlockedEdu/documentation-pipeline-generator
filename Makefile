@@ -1,6 +1,6 @@
 .PHONY : build run publish
 
-build: build-mkdocs
+build: build-docker build-mkdocs
 
 run: run-mkdocs
 
