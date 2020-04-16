@@ -1,10 +1,10 @@
 {% if cookiecutter.documentation_engine in ["Sphinx", "Both"] %}
-sphinx = "*"
-recommonmark = "*"
-sphinx-rtd-theme = "*"
+sphinx
+recommonmark
+sphinx-rtd-theme"
 {% endif %}
 {% if cookiecutter.documentation_engine in ["MkDocs", "Both"] %}
-mkdocs = "*"
-pymdown-extensions = "*"
-mkdocs-material = "*"
+mkdocs
+pymdown-extensions
+mkdocs-material
 {% endif %}
