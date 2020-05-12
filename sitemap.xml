@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://zelgius.github.io/documentation-pipelines/</loc>
-     <lastmod>2020-04-16</lastmod>
+     <lastmod>2020-05-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://zelgius.github.io/documentation-pipelines/mkdocs-examples/addons/</loc>
-     <lastmod>2020-04-16</lastmod>
+     <lastmod>2020-05-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
