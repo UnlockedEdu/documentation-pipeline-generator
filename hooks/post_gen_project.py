@@ -1,6 +1,7 @@
 import os
 import shutil
 from mako.lookup import TemplateLookup
+from collections import OrderedDict
 
 mylookup = TemplateLookup(directories=".", strict_undefined=True)
 
